@@ -8,12 +8,12 @@ ENV         DEBIAN_FRONTEND noninteractive
 # Install Dependencies
 RUN         apt-get update
 RUN         apt-get install -y apt-utils cron ca-certificates lib32gcc1 unzip net-tools lib32stdc++6 lib32z1 lib32z1-dev curl wget screen tmux libmono-cil-dev mono-runtime
-RUN         apt install screen htop unzip #Utils
+RUN         apt install screen htop unzip 
 RUN         dpkg --add-architecture i386
-RUN         apt install lib32stdc++6 #SteamCMD dependencies
+RUN         apt install lib32stdc++6 
 RUN         apt install mono-runtime mono-reference-assemblies-2.0		                        
-RUN         apt install libc6:i386 libgl1-mesa-glx:i386 libxcursor1:i386 libxrandr2:i386 # 32 bit prerequisites for Unity 3D
-RUN         apt install libc6-dev-i386 libgcc-4.8-dev:i386 # prequesites for BattlEye
+RUN         apt install libc6:i386 libgl1-mesa-glx:i386 libxcursor1:i386 libxrandr2:i386
+RUN         apt install libc6-dev-i386 libgcc-4.8-dev:i386
 
 RUN         useradd -m -d /home/container container
 
